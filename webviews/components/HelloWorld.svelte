@@ -11,6 +11,7 @@
     uri: "https://binder-prod.papercup.com",
     cache: new InMemoryCache(),
     headers: {
+      // TODO: API KEY
       "x-api-key": ``,
     },
   });
