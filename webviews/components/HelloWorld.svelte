@@ -1,9 +1,9 @@
-<Test />
+<Users />
+<TranslatedVideos />
 
 <script lang="ts">
-  console.log('hi there')
-
-  import Test from "./Test.svelte";
+  import Users from "./Users.svelte";
+  import TranslatedVideos from "./TranslatedVideos.svelte";
   import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
   import { setClient, query } from "svelte-apollo";
 
