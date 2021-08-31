@@ -33,11 +33,17 @@
 </script>
 
 <div>
-  users
+  <h2>Users</h2>
 
-  <ul>
-    {#each users as [id, email], i}
-    <li>{i + 1}: {id} - {email}</li>
-    {/each}
-  </ul>
+  <div>
+    {#if users.length > 0}
+    <ul>
+      {#each users as [id, email], i}
+      <li>{i + 1}: {id} - {email}</li>
+      {/each}
+    </ul>
+    {:else}
+    <p>No users online</p>
+    {/if}
+  </div>
 </div>

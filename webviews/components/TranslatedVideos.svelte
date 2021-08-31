@@ -53,13 +53,17 @@
 </script>
 
 <div>
-  tv
+  <h2>TranslatedVideos</h2>
 
   <div>
-    {#each translatedVideos as {id, title, stateValue, createdAt}, i}
-    <div>{i + 1}: {id} - {title}</div>
-    <div>{stateValue}</div>
-    <div style="padding-bottom: 12px">{new Date(createdAt)}</div>
-    {/each}
+    {#if translatedVideos.length > 0}
+      {#each translatedVideos as {id, title, stateValue, createdAt}, i}
+      <div>{i + 1}: {id} - {title}</div>
+      <div>{stateValue}</div>
+      <div style="padding-bottom: 12px">{new Date(createdAt)}</div>
+      {/each}
+    {:else}
+      <p>No stuck translatedVideos</p>
+    {/if}
   </div>
 </div>
