@@ -8,38 +8,6 @@
   const thirtyDaysAgoEpoch = Date.now() - 1000 * 60 * 60 * 24 * 30;
   const thirtyDaysAgoStr = new Date(thirtyDaysAgoEpoch).toISOString();
 
-  const STUCK_SOURCE_VIDS = gql`
-    {
-      sourceVideos(
-        where: {
-          stateValue_not: Complete
-          updatedAt_lt: "2021-08-26T09:31:30.828Z"
-          createdAt_gt: "2021-08-01T10:31:30.828Z"
-        }
-      ) {
-        id
-        title
-      }
-    }
-  `;
-  const STUCK_OUTPUT_GROUPS = gql`
-    {
-      outputGroups(
-        where: {
-          stateValue_not: Complete
-          updatedAt_lt: "2021-08-26T09:31:30.828Z"
-          createdAt_gt: "2021-08-01T10:31:30.828Z"
-        }
-      ) {
-        id
-        translatedVideo {
-          sourceVideo {
-            title
-          }
-        }
-      }
-    }
-  `;
   const STUCK_TRANSLATED_VIDEOS = gql`
       {
         translatedVideos(

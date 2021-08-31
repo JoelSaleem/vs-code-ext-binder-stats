@@ -1,9 +1,12 @@
 <Users />
 <TranslatedVideos />
+<OutputGroups />
 
 <script lang="ts">
   import Users from "./Users.svelte";
   import TranslatedVideos from "./TranslatedVideos.svelte";
+  import OutputGroups from "./OutputGroups.svelte";
+  
   import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
   import { setClient, query } from "svelte-apollo";
 
@@ -19,5 +22,3 @@
 
   setClient(client);
 </script>
-
-<!-- <h1>Hello world 3 asdf</h1> -->
