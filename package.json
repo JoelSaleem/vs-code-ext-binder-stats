@@ -1,6 +1,7 @@
 {
   "name": "foo",
   "displayName": "foo",
+  "publisher": "joelsaleem",
   "description": "",
   "version": "0.0.1",
   "engines": {

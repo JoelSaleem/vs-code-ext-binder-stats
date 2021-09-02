@@ -57,6 +57,8 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
       vscode.Uri.joinPath(this._extensionUri, "media", "vscode.css")
     );
 
+    console.log('\n\n\n', styleResetUri, )
+
     // Use a nonce to only allow a specific script to be run.
     const nonce = getNonce();
 
