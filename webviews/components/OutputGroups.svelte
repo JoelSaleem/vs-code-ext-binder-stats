@@ -1,6 +1,7 @@
 <script>
   import { query } from "svelte-apollo";
   import { gql } from "@apollo/client";
+  import ShowBtn from "./ShowBtn.svelte";
 
   const oneHourAgoEpoch = Date.now() - 1000 * 60 * 60;
   const oneHourAgoStr = new Date(oneHourAgoEpoch).toISOString();
@@ -54,12 +55,21 @@
     .catch((e) => {
       console.log(e);
     });
+
+  let show = false;
+  const toggleShow = () => (show = !show);
 </script>
 
 <div>
   <h2>Output Groups</h2>
 
-  {#if outputGroups.length > 0}
+  <ShowBtn 
+    onClick={toggleShow}
+    isShowing={show}
+    resource="outputGroups"
+  />
+
+  {#if show} {#if outputGroups.length > 0}
   <div>
     {#each outputGroups as { id, stateValue, title, createdAt}, i}
     <div>{i + 1}: {id} - {title}</div>
@@ -69,5 +79,5 @@
   </div>
   {:else}
   <p>No stuck ogs</p>
-  {/if}
+  {/if} {/if}
 </div>
