@@ -17,8 +17,9 @@
               ReadyToQA
               InProgressQA
               OutputGenerated
+              ReadyForReview
+              ReadyForPostProduction
               Complete
-              ReadyForPublish
             ]
             updatedAt_lt: "${oneHourAgoStr}"
             createdAt_gt: "${thirtyDaysAgoStr}"
