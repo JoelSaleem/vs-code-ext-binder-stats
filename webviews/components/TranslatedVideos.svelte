@@ -18,6 +18,9 @@
               InProgressQA
               OutputGenerated
               ReadyForReview
+              InProgressReview
+              ReadyForRevision
+              InProgressRevision
               ReadyForPostProduction
               Complete
             ]

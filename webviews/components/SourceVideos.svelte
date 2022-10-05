@@ -13,7 +13,7 @@
     {
       sourceVideos(
         where: {
-          stateValue_not: Complete
+          stateValue_not_in: [Complete, AwaitingManualTranscript, AwaitingManualUpload]
           updatedAt_lt: "${oneHourAgoStr}"
           createdAt_gt: "${thirtyDaysAgoStr}"
         }
